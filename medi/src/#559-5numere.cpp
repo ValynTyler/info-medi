@@ -4,32 +4,27 @@ using namespace std;
 
 int main() {
 
-    int mx = -1, my = -1, mz = -1;
+    int nums[5];
 
     for (int i = 0; i < 5; i++) {
-        int n;
-        cin >> n;
-        if (n > mx) {
-            
-            if (n > my) {
-             
-                if (n > mz) {
-                    mz = n;
-                }
-             
-                else {
-                    my = n;
-                }
+        cin >> nums[i];
+    }
 
-            }
+    for (int j = 0; j < 5; j++) {
+     
+        for (int i = 1; i < 5; i++) {
             
-            else {
-                mx = n;
+            if (nums[i - 1] > nums[i]) {
+                // swap
+                int aux = nums[i - 1];
+                nums[i - 1] = nums[i];
+                nums[i] = aux;
             }
         }
     }
 
-    cout << mx + my + mz;
+    int s = nums[4] + nums[3] + nums[2];
+    cout << s;
 
     return 0;
 }

@@ -24,16 +24,21 @@ int main() {
     int h1, m1;
     cin >> h1 >> m1;
     
+    long long initial_time_in_minutes = m1 + h1 * 60;
+    
+
     int x, y;
     cin >>  x >> y;
 
+    long long added_time_in_minutes = y + x * 60;
 
-    int time_in_minutes = (h1 + x) * 60 + m1 + y;
-    int h2 = time_in_minutes / 60;
+
+    long long time_in_minutes = initial_time_in_minutes + added_time_in_minutes;
+
+
+    int h2 = (time_in_minutes / 60) % 24;
     int m2 = time_in_minutes % 60;
-
     cout << h2 << " " << m2;
-
 
     return 0;
 }

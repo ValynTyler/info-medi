@@ -4,14 +4,14 @@ using namespace std;
 
 int main() {
 
-    int a, b;
+    long long a, b;
     cin >> a >> b;
 
 
 
 
     // cout << a / 10 << " " << b / 10;
-    cout << b/10 - a/10;
+    cout << b/10 - (a - 1)/10;
 
     return 0;
 }
