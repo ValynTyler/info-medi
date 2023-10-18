@@ -7,17 +7,23 @@ int main() {
     int n;
     cin >> n;
 
-    int newn = 0;
     int p = 1;
-    while (n) {
+    int aux = 0;
+    int rez = 0;
 
-        newn = (newn + 9) * 100;
+    while (n) {
+        aux = n % 10 * 10 + n % 100 / 10;
         
-        
+        rez += aux * p;
+
+        p = 100;
         n /= 100;
     }
 
-    cout << newn;
+    n = aux;
+
+
+    cout << n;
 
     return 0;
 }
