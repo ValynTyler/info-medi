@@ -4,14 +4,14 @@ using namespace std;
 
 int main() {
 
-    int n;
+    long long n;
     cin >> n;
 
-    int maxp = -1;
+    long long maxp = -1;
 
     // algoritmul nu scoate factori non-primi, 
     // asa ca nu trebuie verificata primalitatea
-    for (int d = 2; d * d <= n; d++) {
+    for (long long d = 2; d * d <= n; d++) {
 
         while (n % d == 0) {
             n /= d;

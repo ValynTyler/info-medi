@@ -3,12 +3,12 @@
 using namespace std;
 
 int main() {
-    
-    int x;
-    cin >> x;
 
     int last;
     cin >> last;
+
+    int x;
+    cin >> x;
 
     int sum = x + last;
 

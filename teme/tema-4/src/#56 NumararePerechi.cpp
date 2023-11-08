@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ int main() {
 
     while (y) {
         
-        if (y % 10 == x % 10) {
+        if (abs(y % 10) == abs(x % 10)) {
             cnt++;
         }
 

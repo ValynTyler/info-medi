@@ -9,8 +9,8 @@ int main() {
 
     int x;
 
-    int imp1;
-    int imp2;
+    int imp1 = 0;
+    int imp2 = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> x;
