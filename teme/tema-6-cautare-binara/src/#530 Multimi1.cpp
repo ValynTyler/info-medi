@@ -12,7 +12,7 @@ namespace multimi {
     int x[100000], y[100000];
 
     int p, q;
-    int comm[100000], all[100000];
+    int comm[100000], all[200000];
 
     void citire() {
         cin >> n;
@@ -28,8 +28,7 @@ namespace multimi {
     }
 
     void multimi() {
-        int i = 0;
-        int j = 0;
+        int i = 0;int j = 0;
 
         while (i < n && j < m) {
             if (x[i] < y[j]) {
@@ -58,13 +57,12 @@ namespace multimi {
     }
 
     void afis() {
-
-        cout << "\n";
         for (int i = 0; i < q; i++) {
             cout << all[i] << " ";
         }
 
-        cout << "\n";
+        cout << '\n';
+
         for (int i = 0; i < p; i++) {
             cout << comm[i] << " ";
         }

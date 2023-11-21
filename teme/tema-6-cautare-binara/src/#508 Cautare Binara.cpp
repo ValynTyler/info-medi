@@ -18,7 +18,7 @@ namespace cautare {
             return true;
         }
         
-        if (left_index == right_index) {
+        if (left_index > right_index) {
             return false;
         }
 

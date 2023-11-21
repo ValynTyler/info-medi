@@ -11,18 +11,18 @@ namespace cautare {
     int n;
     int m;
 
-    int x[25000];
-    int y;
+    long long x[25000];
+    long long y;
 
-    bool cautare_binara(int query, int left_index, int right_index) {
+    bool cautare_binara(long long query, int left_index, int right_index) {
 
         int middle_index = (left_index + right_index) / 2;
 
         if (query == x[middle_index]) {
             return true;
         }
-        
-        if (left_index == right_index) {
+
+        if (left_index > right_index) {
             return false;
         }
 
@@ -41,16 +41,12 @@ namespace cautare {
         }
 
         int cnt = 0;
-        
         fin >> m;
         for (int j = 0; j < m; j++) {
             fin >> y;
-        
-            if (cautare_binara(y, 0, n)) {
-                cnt++;
-            }
+            cnt += cautare_binara(y, 0, n);
         }
-        
+
         fout << cnt;
     }
 }
