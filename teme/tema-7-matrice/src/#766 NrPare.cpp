@@ -101,16 +101,17 @@ namespace matrice {
     void rezolvare() {
         int nmax = -1;
 
+        int pare_linie[101];
+
         for (int i = 1; i <= n; i++) {
-            int nr = nr_elem_pare_linie(i);
-            if (nr > nmax) {
-                nmax = nr;
+            pare_linie[i] = nr_elem_pare_linie(i);
+            if (pare_linie[i] > nmax) {
+                nmax = pare_linie[i];
             }
         }
 
         for (int i = 1; i <= n; i++) {
-            int nr = nr_elem_pare_linie(i);
-            if (nr == nmax) {
+            if (pare_linie[i] == nmax) {
                 cout << i << " ";
             }
         }

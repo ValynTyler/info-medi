@@ -36,7 +36,7 @@ namespace matrice {
 
     int sum_diag_pcp() {
         int suma = 0;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i < n; i++) {
             suma += a[i][i];
         }
 
@@ -45,7 +45,7 @@ namespace matrice {
 
     int sum_diag_sec() {
         int suma = 0;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i < n; i++) {
             suma += a[n + 1 - i][i];
         }
         return suma;

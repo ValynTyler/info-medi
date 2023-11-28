@@ -84,13 +84,15 @@ namespace matrice {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                
+
                 int nr = a[i][j];
                 int ap = nr_ap(nr);
-                
-                if (ap >= ap_max && nr >= nr_max) {
-                    nr_max = nr;
+
+                if (ap >= ap_max) {
                     ap_max = ap;
+                    if (nr >= nr_max) {
+                        nr_max = nr;
+                    }
                 }
             }
         }
