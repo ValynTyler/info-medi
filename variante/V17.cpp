@@ -1,34 +1,35 @@
 /**
- 1. b
+1. b
 
- 2. Algoritmul afișează AB de un număr de ori egal cu câtul împărțirii întregi dintre
-cel mai mare dintre numerele citite la cel mai mic.
+2. Citește două numere naturale și afișează un număr de perechi AB egal cu câtul împărțirii
+celui mai mare la cel mai mic
 
 Răspunsuri:
+a) ABABABAB
 
-a) ABABABAB (AB de 4 ori deoarece câtul dintre 9 și 2 este 4)
+b) mai întâi o precizare: într-o pereche contează ordinea scrierii (gen (1,3)!=(3,1) )
+  Răspuns: 12
 
-b) 12 (iată-le mai jos)
-
-acestea fiind:               căutăm numere cuprinse între 1 și 20 care
-(6,1)   (1,6)               împărțite dau câtul 6, și le luăm în ambele feluri
-(12,2)  (2,12)              deoarece if-ul inițial oricum le interschimbă.
-(13,2)  (2,13)
-(18,3)  (3,18)
-(19,3)  (3,19)
-(20,3)  (3,20)
+(ca să afișeze 12 caractere <=> sunt 6 perechi.
+ Întrebarea se traduce deci prin: câte sunt perechile de numere din intervalul [1,20] cu câtul 6
+(6,1) și (1,6)
+(12,2) și (2,12)
+(13,2) și (2,13)
+(18,3) și (3,18)
+(19,3) și (3,19)
+(20,3) și (3,20)
 
 c) mai jos
 
 d)
- citeşte x,y(numere naturale)
+citeşte x,y (numere naturale)
 ┌dacă x<y atunci
 │ x <- x-y
 │ y <- x+y
 │ x <- y-x
 └■
-┌dacă x≥y atunci   ///obs: acest "dacă" este redundant din cauza
-│┌execută             ///interschimbării de mai sus, care ne garantează că x>=y
+┌dacă x≥y atunci  ///dacă-ul este redundant, din cauza interschimbării de mai sus
+│┌execută
 ││ scrie ’A’
 ││ x <- x-y
 ││ scrie ’B’
@@ -36,7 +37,6 @@ d)
 └■
 */
 #include <iostream>
-
 using namespace std;
 
 int main()

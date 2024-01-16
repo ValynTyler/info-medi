@@ -1,28 +1,26 @@
 /**
- 1. a
+1. a
 
- 2. Algoritmul citește un șir de numere a căror introducere se termină la întâlnirea
-valorii 0, care NU face parte din șir.
-  Formează un număr cu cifra maximă de la fiecare valoare citită.
+2. Citește un șir de numere a cărui introducere se termină cu 0, care nu se ia în seamă.
+Formează un număr care are ca cifre cifra maximă de la fiecare dintre valorile introduse.
 
 Răspunsuri:
 a) 27596
 
 b) Posibile răspunsuri:
-   712 54 10 0
-   276 154 1010 0
+   372 554 100 0
+   70 50 10 0
 
 c) mai jos
 
 d)
-
 citeşte x (număr natural)
 n <- 0
-┌dacă x≠0 atunci  ///acest dacă este obligatoriu (altfel se mai face o citire dacă băgăm iniț. x=0)
-│┌execută
+┌dacă x≠0 atunci ///acest dacă este obligatoriu, în caz contrar dacă se citește inițial 0
+│┌execută          ///ar mai face o citire, deci n-ar fi echivalent cu cel dat
 ││ y <- x; c <- 0
-││┌dacă y>0 atunci ///acest al doilea dacă, în schimb, este redundant. Și dacă-l omitem ,alg.
-│││┌execută           ///face același lucru
+││┌dacă y>0 atunci    ///pe când ăsta ESTE redundant - când se ajunge aici sigur y>0
+│││┌execută              ///pt. că l-a primit pe x mai sus
 ││││ ┌dacă y%10>c atunci
 ││││ │ c <- y%10
 ││││ └■
@@ -40,8 +38,9 @@ using namespace std;
 
 int main()
 {
-    int x,n=0,c,y;
+    int x,n,y,c;
     cin>>x;
+    n=0;
     while(x)
     {
         y=x;c=0;

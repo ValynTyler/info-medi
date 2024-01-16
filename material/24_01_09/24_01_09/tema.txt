@@ -1,0 +1,16 @@
+Tema de pe pbinfo
+
+Terminați varianta începută împreună - mai aveți de lucrat subiectul III, exercițiile 1,2,3
+Pentru asta veți face proiectele (sau direct sursele .cpp, dacă nu lucrați în codeblocks)
+b2024_model_1_2
+b2024_model_3_2
+b2024_model_3_3
+
+Lucrați cealaltă variantă - pdf-ul
+E_d_Informatica_2023_sp_MI_C_var_05_LRO.pdf
+
+Denumiți proiectele (sursele)
+b2023_05_12
+b2023_05_3_1
+b2023_05_3_2
+b2023_05_3_3
