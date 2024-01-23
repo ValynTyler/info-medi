@@ -19,31 +19,30 @@ int main() {
 
     int x;
     char s[101];
-    char mat[2][101][100];
+    char out1[101] = "";
+    char out2[101] = "";
 
     cin >> x;
     cin.get();
     cin.getline(s, 101);
 
     char* p = strtok(s, " ");
-    int i = 0;
-    int j = 0;
     while (p) {
         if (strlen(p) < x) {
-            strcpy(mat[0][i++], p);
+            strcat(out1, p);
+            strcat(out1, " ");
         }
         else if (strlen(p) > x) {
-            strcpy(mat[1][j++], p);
+            strcat(out2, p);
+            strcat(out2, " ");
         }
         p = strtok(NULL, " ");
     }
 
-    for (int k = 0; k < i; k++) {
-        cout << mat[0][k] << " ";
-    }
-    cout << endl;
-    for (int k = 0; k < j; k++) {
-        cout << mat[1][k] << " ";
+    if (out1[0] == 0 || out2[0] == 0) {
+        cout << "nu exista";
+    } else {
+        cout << out1 << '\n' << out2;
     }
 
     return 0;
