@@ -6,7 +6,7 @@ using namespace std;
 // for convenience, folosesc fisiere.
 ifstream fin("bac.txt");
 
-int n, m;
+int m, n;
 int a[21][21];
 
 int patr(int lin, int col) {
@@ -19,9 +19,9 @@ int patr(int lin, int col) {
 }
 
 void cit() {
-    fin >> n >> m;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    fin >> m >> n;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
             fin >> a[i][j];
         }
     }
@@ -33,7 +33,7 @@ int main() {
 
     int max = -1;
 
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < m - 1; i++) {
         for (int j = 0; j < n - 1; j++) {
             int current = patr(i, j);
             if (current > max) {

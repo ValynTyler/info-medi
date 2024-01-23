@@ -20,12 +20,13 @@ void DNPI(int n) {
 
     cout << 1 << " ";
 
-    for (int d = 3; d * 2 <= n; d += 2) {
+    // 9 e primul nr neprim impar diferit de 1
+    for (int d = 9; d * 2 <= n; d += 2) {
         if (!eprim(d) && (n % d == 0)) {
             cout << d << " ";
         }
     }
-    if (n % 2 == 1) {
+    if (n % 2 == 1 && !eprim(n)) {
         cout << n;
     }
 }
