@@ -8,7 +8,7 @@ Subiectul I
 2.
 Subprogramul află câte dintre valorile din vectorul v
 (în cazul nostru x) sunt egale cu indicele la care se află.
-Așadar, răspuns: a. (2)
+Așadar, răspuns: a. (2) /// oops no its d. but for the same reasons :/
 
 3.
 jucători {
@@ -42,6 +42,7 @@ Sol imediat după {3, 6, 5, 4}:
 {6, 1, 2, x} NU E BUN (reg. 3)
 {6, 1, 3, x} NU E BUN (reg. 2)
 {6, 1, 4, 5} E BUN!!! (cred)
+=> c.
 
 4. a.
 5. ??? probabil d. pentru că un subgraf conține strict mai puține noduri decât graful din care originează.
@@ -52,7 +53,6 @@ Subiectul II 1. a)
 */
 
 int main() {
-    cout << "Hello from InfRO!";
   
     return 0;
 }
