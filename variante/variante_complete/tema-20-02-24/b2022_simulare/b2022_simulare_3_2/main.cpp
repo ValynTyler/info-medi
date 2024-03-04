@@ -17,7 +17,10 @@ int main() {
     char* nume = strtok(NULL, "; ");
     
     while(pren) {
-        if (strcmp(x, pren) + 1) {
+        // `strcmp` intoarce 0 DACA lhs si rhs SUNT egale,
+        //  intoarce -1 daca lhs.alphabetic < rhs.alphabetic
+        //  si 1 daca lhs.alphabetic > rhs.alphabetic
+        if (strcmp(x, pren) == 0) {
             cout << nume << " ";
         }
 

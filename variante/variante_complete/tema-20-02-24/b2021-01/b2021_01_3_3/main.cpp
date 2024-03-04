@@ -26,8 +26,12 @@ int main() {
         ult = crt;
     }
 
-    cout << outp[0] << " " << outp[1];
-  
+    if (outp[1]) {
+        cout << outp[0] << " " << outp[1];
+    } else {
+        cout << "nu exista";
+    }
+
     return 0;
 }
 
