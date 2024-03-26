@@ -62,19 +62,39 @@ a) 0 + 20 + 100 + 0 + 1900 => 2021
 b) 123, 124, 125, etc (orice numar cu cif. ord. crescator)
 c) (Mai jos)
 d)
-citește n (număr natural nenul) 
- m<-0 
+citește n (număr natural nenul)
+ m<-0
  i<-1
 ┌cât timp i <= n execută
-│ citește x (număr natural) 
-│┌cât timp x%10 > [x/10]%10 execută  
-││ x<-[x/10] 
-│└■ 
-│ m<-m+x 
-└■ 
-┌dacă m>0 atunci scrie m 
-│altfel scrie „niciunul” 
+│ citește x (număr natural)
+│┌cât timp x%10 > [x/10]%10 execută
+││ x<-[x/10]
+│└■
+│ m<-m+x
 └■
+┌dacă m>0 atunci scrie m
+│altfel scrie „niciunul”
+└■
+
+2.
+struct vec2 {
+    int x;
+    int y;
+};
+
+struct figura {
+    vec2 centru;
+    int raza;
+}f;
+
+3.
+for(i=0;i<7;i++)
+  for(j=0;j<7;j++)
+    if (i < j) {
+        m[i][j] = 'a' + j - i;
+    } else {
+        m[i][j] = '+';
+    }
 
 */
 
@@ -87,7 +107,7 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         cin >> x;
-        while ((x % 10) > (x/10)%10) {
+        while ((x % 10) > (x / 10) % 10) {
             x /= 10;
         }
         m += x;
@@ -95,7 +115,8 @@ int main() {
 
     if (m > 0) {
         cout << m;
-    } else {
+    }
+    else {
         cout << "niciunul";
     }
 
