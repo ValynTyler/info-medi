@@ -30,12 +30,8 @@ int main() {
         fin >> y;
         y = y % 100;
 
-        if (true /* y > 10 */) {
-            s += ap[y];
-        }
-        if (/*inv(y) > 10 && */ inv(y) != y) {
-            s += ap[inv(y)];
-        }
+        s += ap[y];
+        s += ap[inv(y)] * (inv(y) != y);
     }
 
     cout << s;
