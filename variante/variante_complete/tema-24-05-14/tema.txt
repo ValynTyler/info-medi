@@ -1,0 +1,9 @@
+E_d_Informatica_C_sp_MI_2018_var_02_LRO.pdf
+
+Atenție că s-a schimbat structura. 
+
+Faceți proiectele:
+b2018_02_1 - grila + pseudocod
+b2018_02_2 - grile, short-uri + programare
+b2018_02_3 - grila, short + prima problema de programare
+b2018_02_3_4 - ultima problema de programare
